@@ -18,6 +18,9 @@
 		269B396A1C0FE69900EFA291 /* VenueData.m in Sources */ = {isa = PBXBuildFile; fileRef = 269B39691C0FE69900EFA291 /* VenueData.m */; };
 		269B396D1C10D49000EFA291 /* StadiumDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 269B396C1C10D49000EFA291 /* StadiumDetail.m */; };
 		269B39721C10D6DC00EFA291 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 269B39711C10D6DC00EFA291 /* Color.m */; };
+		26EF879B1C1107810042EA06 /* ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26EF879A1C1107810042EA06 /* ipad.storyboard */; };
+		26EF87E01C1109F10042EA06 /* iPadMasterViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EF87DF1C1109F10042EA06 /* iPadMasterViewControllerTableViewController.m */; };
+		26EF87E31C11108E0042EA06 /* DetailiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EF87E21C11108E0042EA06 /* DetailiPadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,11 @@
 		269B396C1C10D49000EFA291 /* StadiumDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StadiumDetail.m; sourceTree = "<group>"; };
 		269B39701C10D6DC00EFA291 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 		269B39711C10D6DC00EFA291 /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
+		26EF879A1C1107810042EA06 /* ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ipad.storyboard; path = ../ipad.storyboard; sourceTree = "<group>"; };
+		26EF87DE1C1109F10042EA06 /* iPadMasterViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iPadMasterViewControllerTableViewController.h; path = ../iPadMasterViewControllerTableViewController.h; sourceTree = "<group>"; };
+		26EF87DF1C1109F10042EA06 /* iPadMasterViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iPadMasterViewControllerTableViewController.m; path = ../iPadMasterViewControllerTableViewController.m; sourceTree = "<group>"; };
+		26EF87E11C11108E0042EA06 /* DetailiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailiPadViewController.h; sourceTree = "<group>"; };
+		26EF87E21C11108E0042EA06 /* DetailiPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailiPadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +121,7 @@
 				269B39381C0FE55700EFA291 /* AppDelegate.h */,
 				269B39391C0FE55700EFA291 /* AppDelegate.m */,
 				269B393E1C0FE55700EFA291 /* Main.storyboard */,
+				26EF879A1C1107810042EA06 /* ipad.storyboard */,
 				269B396F1C10D55200EFA291 /* Controller */,
 				269B396E1C10D54400EFA291 /* Model */,
 				269B39411C0FE55700EFA291 /* Assets.xcassets */,
@@ -163,6 +172,10 @@
 		269B396F1C10D55200EFA291 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				26EF87E11C11108E0042EA06 /* DetailiPadViewController.h */,
+				26EF87E21C11108E0042EA06 /* DetailiPadViewController.m */,
+				26EF87DE1C1109F10042EA06 /* iPadMasterViewControllerTableViewController.h */,
+				26EF87DF1C1109F10042EA06 /* iPadMasterViewControllerTableViewController.m */,
 				269B396B1C10D49000EFA291 /* StadiumDetail.h */,
 				269B396C1C10D49000EFA291 /* StadiumDetail.m */,
 				269B393B1C0FE55700EFA291 /* ViewController.h */,
@@ -277,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26EF879B1C1107810042EA06 /* ipad.storyboard in Resources */,
 				269B39451C0FE55700EFA291 /* LaunchScreen.storyboard in Resources */,
 				269B39421C0FE55700EFA291 /* Assets.xcassets in Resources */,
 				269B39401C0FE55700EFA291 /* Main.storyboard in Resources */,
@@ -307,7 +321,9 @@
 				269B393D1C0FE55700EFA291 /* ViewController.m in Sources */,
 				269B393A1C0FE55700EFA291 /* AppDelegate.m in Sources */,
 				269B39371C0FE55700EFA291 /* main.m in Sources */,
+				26EF87E01C1109F10042EA06 /* iPadMasterViewControllerTableViewController.m in Sources */,
 				269B39721C10D6DC00EFA291 /* Color.m in Sources */,
+				26EF87E31C11108E0042EA06 /* DetailiPadViewController.m in Sources */,
 				269B396A1C0FE69900EFA291 /* VenueData.m in Sources */,
 				269B396D1C10D49000EFA291 /* StadiumDetail.m in Sources */,
 			);
@@ -537,6 +553,7 @@
 				269B39611C0FE55800EFA291 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		269B39621C0FE55800EFA291 /* Build configuration list for PBXNativeTarget "NFLStadiumsTests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +562,7 @@
 				269B39641C0FE55800EFA291 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		269B39651C0FE55800EFA291 /* Build configuration list for PBXNativeTarget "NFLStadiumsUITests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +571,7 @@
 				269B39671C0FE55800EFA291 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

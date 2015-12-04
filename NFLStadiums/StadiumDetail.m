@@ -43,15 +43,25 @@
             [formatterForZone setDateFormat:@"yyyy-MM-dd HH:mm:ss Z"];
             NSDate *dateObjForZone = [formatterForZone dateFromString:startZone];
             [formatterForZone setDateFormat:@"Z"];
+
+            NSString *startDateString = [formatterForZone stringFromDate:dateObjForZone];
+         //   NSLog(@"NFL Zone: %@", startDateString);
             //Current Time Zone
             NSDate *currentZone = [NSDate date];
             NSDateFormatter *format = [NSDateFormatter new];
             [format setDateFormat:@"Z"];
-            
+            NSString *currentZoneString = [format stringFromDate:currentZone];
+         //   NSLog(@"current Zone: %@", currentZoneString);
+
+
             float timeZoneDiff = [currentZone timeIntervalSinceDate:dateObjForZone];
-            NSLog(@"zone %f", timeZoneDiff);
+           // NSLog(@"zone %f", timeZoneDiff);
+            NSTimeZone *timy = [NSTimeZone new];
 
-
+            NSInteger secondFromGMTDate = ABS([timy secondsFromGMTForDate:dateObjForZone]);
+            NSInteger secondsFromGMTNow = ABS([timy secondsFromGMTForDate:currentZone]);
+            NSInteger timeDiff = secondsFromGMTNow - secondFromGMTDate;
+            NSLog(@"time diff: %ld", (long)timeDiff);
 
             //date for Display
             NSDateFormatter *formatter = [NSDateFormatter new];
@@ -59,8 +69,7 @@
             NSDate *dateObj = [formatter dateFromString:startDate];
             [formatter setDateFormat:@"EEEE MM/dd hh:mm a"];
 
-            NSDate *newDate = [dateObj dateByAddingTimeInterval:timeZoneDiff];
-
+            NSDate *newDate = [dateObj dateByAddingTimeInterval:timeDiff];
             NSString *newDateString = [formatter stringFromDate:newDate];
             NSLog(@"format: %@", newDateString);
 
