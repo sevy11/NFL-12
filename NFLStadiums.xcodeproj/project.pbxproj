@@ -120,8 +120,7 @@
 			children = (
 				269B39381C0FE55700EFA291 /* AppDelegate.h */,
 				269B39391C0FE55700EFA291 /* AppDelegate.m */,
-				269B393E1C0FE55700EFA291 /* Main.storyboard */,
-				26EF879A1C1107810042EA06 /* ipad.storyboard */,
+				26EF87E41C11C4C00042EA06 /* View */,
 				269B396F1C10D55200EFA291 /* Controller */,
 				269B396E1C10D54400EFA291 /* Model */,
 				269B39411C0FE55700EFA291 /* Assets.xcassets */,
@@ -182,6 +181,15 @@
 				269B393C1C0FE55700EFA291 /* ViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		26EF87E41C11C4C00042EA06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				269B393E1C0FE55700EFA291 /* Main.storyboard */,
+				26EF879A1C1107810042EA06 /* ipad.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

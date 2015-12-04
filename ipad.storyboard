@@ -23,15 +23,49 @@
                                     <constraint firstAttribute="height" constant="273" id="E0C-HS-o2i"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQG-xH-pci">
+                                <rect key="frame" x="20" y="353" width="560" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzI-Bb-bcl">
+                                <rect key="frame" x="20" y="387" width="560" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Bg-No-8LM">
+                                <rect key="frame" x="20" y="426.5" width="560" height="173.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2tq-dI-gG9" firstAttribute="top" secondItem="1Sh-FQ-mrj" secondAttribute="bottom" id="32C-g9-cgo"/>
+                            <constraint firstAttribute="trailing" secondItem="OQG-xH-pci" secondAttribute="trailing" constant="20" id="4BG-zC-Ig4"/>
+                            <constraint firstItem="4Bg-No-8LM" firstAttribute="top" secondItem="JzI-Bb-bcl" secondAttribute="bottom" constant="22" id="5yP-2a-xj1"/>
+                            <constraint firstItem="JzI-Bb-bcl" firstAttribute="leading" secondItem="GVo-Vo-fOq" secondAttribute="leading" constant="20" id="BQk-4F-dVP"/>
+                            <constraint firstAttribute="trailing" secondItem="JzI-Bb-bcl" secondAttribute="trailing" constant="20" id="Bv5-ZG-UpX"/>
+                            <constraint firstAttribute="trailing" secondItem="4Bg-No-8LM" secondAttribute="trailing" constant="20" id="DdB-0l-Vpx"/>
+                            <constraint firstItem="OQG-xH-pci" firstAttribute="leading" secondItem="GVo-Vo-fOq" secondAttribute="leading" constant="20" id="I4N-6A-eyG"/>
                             <constraint firstItem="2tq-dI-gG9" firstAttribute="leading" secondItem="GVo-Vo-fOq" secondAttribute="leading" id="LCf-Sy-FO6"/>
+                            <constraint firstItem="ZfY-K7-x1h" firstAttribute="top" secondItem="4Bg-No-8LM" secondAttribute="bottom" id="Sv1-4m-SrE"/>
+                            <constraint firstItem="JzI-Bb-bcl" firstAttribute="top" secondItem="OQG-xH-pci" secondAttribute="bottom" constant="14" id="XoV-Kz-mFh"/>
                             <constraint firstAttribute="trailing" secondItem="2tq-dI-gG9" secondAttribute="trailing" id="bPI-Ke-PRS"/>
+                            <constraint firstItem="OQG-xH-pci" firstAttribute="top" secondItem="2tq-dI-gG9" secondAttribute="bottom" constant="16" id="dgK-Jc-KZD"/>
+                            <constraint firstItem="4Bg-No-8LM" firstAttribute="leading" secondItem="GVo-Vo-fOq" secondAttribute="leading" constant="20" id="fGy-1c-vHc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eM4-ze-62X"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="JzI-Bb-bcl" id="IU4-Mz-aoW"/>
+                        <outlet property="imageView" destination="2tq-dI-gG9" id="UlX-50-ozX"/>
+                        <outlet property="nameLabel" destination="OQG-xH-pci" id="s6o-RF-Cou"/>
+                        <outlet property="scheduleTextView" destination="4Bg-No-8LM" id="JCs-w4-TAB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oit-OJ-zIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,7 +105,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="accessoryView" destination="c0v-QA-Y9L" id="TUv-k7-cPr"/>
-                                    <segue destination="bxA-0M-Lni" kind="show" id="3x8-lr-xTN"/>
+                                    <segue destination="bxA-0M-Lni" kind="show" identifier="Detail" id="3x8-lr-xTN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -81,9 +115,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="0wI-7o-nFw"/>
-                    <connections>
-                        <outlet property="tableView" destination="c0v-QA-Y9L" id="bLL-h8-kS2"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5o-6K-4ku" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,6 +169,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="X1h-9Z-uiC"/>
+        <segue reference="3x8-lr-xTN"/>
     </inferredMetricsTieBreakers>
 </document>

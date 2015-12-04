@@ -20,7 +20,7 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
 
     self.tableView.delegate = self;
@@ -39,7 +39,11 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [self getNFLVenueData];
+
+    [self.navigationController.navigationBar setBarTintColor:[Color nflBlue]];
 }
+
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.pertinentData.count;
 }
@@ -107,9 +111,6 @@
                             [ven convertStringToData:image];
 
                             [self.pertinentData addObject:ven];
-                            NSLog(@"name: %@", ven.venueName);
-                            NSLog(@"image file url: %@", ven.imageURLString);
-                            NSLog(@"address: %@\n %@", ven.address, ven.cityStateZip);
 
                             dispatch_async(dispatch_get_main_queue(), ^{
                                 [self.tableView reloadData];
